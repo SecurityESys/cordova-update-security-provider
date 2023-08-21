@@ -3,10 +3,10 @@ Android Security Provider Plugin for Apache Cordova
 ==================================
 
 __Installation:__
-`ionic cordova plugin add https://github.com/AbhishekJoshi/cordova-update-security-provider`
+1. To add this plugin just type: `cordova plugin add @SecurityESys/cordova-update-security-provider`
+2. To remove this plugin type: `cordova plugin remove cordova-update-security-provider`
 
-
-Read more about this topic: https://developer.android.com/training/articles/security-gms-provider.html 
+Read more about this topic: https://developer.android.com/training/articles/security-gms-provider.html
 
 __Usage:__
 
@@ -19,10 +19,7 @@ The app consuming this can warn the user after that additional actions need to b
 
 ES6+/Ionic:
 ```
-      declare var SecurityProvider;
-
-...
-      SecurityProvider.installIfNeededAsync().then(data => {
+      window.SecurityProvider.installIfNeededAsync().then(data => {
         console.log('Everything is good: ' + data);
       }).catch(error => {
         console.log("Something is wrong with this device's Google Play Services");
